@@ -1,26 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <TripMakerHeader></TripMakerHeader>
+  <div class="d-flex justify-content-center">
+    <TripMaker></TripMaker>
+    <TripResults></TripResults>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TripMaker from './components/TripMaker.vue';
+import TripMakerHeader from './components/TripMakerHeader.vue';
+import TripResults from './components/TripResults.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TripMaker, 
+    TripMakerHeader,
+    TripResults
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: Arial;
 }
 </style>
